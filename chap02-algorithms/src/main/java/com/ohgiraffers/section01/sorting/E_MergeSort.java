@@ -26,6 +26,38 @@ public class E_MergeSort {
             int mid = (left + right) / 2;
             mergeSort(arr, temp, left, mid);
             mergeSort(arr, temp, mid + 1, right);
+            merge(arr, temp, left, mid, right);
         }
+    }
+
+    private static void merge(int[] arr, int[] temp, int left, int mid, int right) {
+        System.out.println("병합 전 : " + Arrays.toString(arr));
+        System.out.println("left: " + left + ", mid: " + mid + ", right: " + right);
+
+        // 병합 구간의 배열을 임시 배열에 복사
+        for(int i = left; i <= right; i++) {
+            temp[i] = arr[i];
+        }
+
+        int leftIndex = left;
+        int rightIndex = mid + 1;
+        int current = left;
+
+        // 두 분의 배열을 비교하면서 병합하는 과정을 진행한다.
+        while(leftIndex <= mid && rightIndex <= right) {
+            if(temp[leftIndex] <= temp[rightIndex]) {
+                arr[current++] = temp[leftIndex++];
+            } else {
+                arr[current++] = temp[rightIndex++];
+            }
+        }
+
+        // 왼쪽 배열에 남은 요소를 복사
+        while(leftIndex <= mid) {
+            arr[current++] = temp[leftIndex++];
+        }
+
+        System.out.println("병합 후 : " + Arrays.toString(arr));
+        System.out.println("======================================================");
     }
 }
