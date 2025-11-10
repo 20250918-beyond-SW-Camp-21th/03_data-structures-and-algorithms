@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 /*
 * Union & Find
 * 집합 간의연산을 효율적으로 처리하기 위해 설계된 데이터 구조
-* 특히 집합의 합집합(union)과 특정 원소가 속한 집합의 찾기(find)연산을 빠르게 처리하느데 유용하다.
+* 특히 집합의 합집합(union)과 특정 원소가 속한 집합의 찾기(find)연산을 빠르게 처리하는데 유용하다.
 * 집합은 서로 다른 원소들로 구성되며, 초기에는 각 원소가 독립적인 집합을 형성한다.
 * */
 public class E_UnionAndFind {
