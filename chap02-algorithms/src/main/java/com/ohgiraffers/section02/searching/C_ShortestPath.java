@@ -1,5 +1,6 @@
 package com.ohgiraffers.section02.searching;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
@@ -56,6 +57,18 @@ public class C_ShortestPath {
 
         /* 도착지의 값을 반환 (도착 할 때까지의 최적의 경로 단계 수) */
         return map[N-1][M-1];
+    }
+
+    static void bfs(int x, int y) {
+        q.add(new Node(x, y));
+        visit[x][y] = true;
+
+        /* 시작지점에서부터 큐를 이용해서 큐에 담기는 노드가 제거 될때까지 너비 우선 탐색을 진행한다. */
+        while(!q.isEmpty()){
+
+            /* 현재 탐색을 진행할 노드 */
+            Node n = q.poll();
+        }
     }
 
 }
