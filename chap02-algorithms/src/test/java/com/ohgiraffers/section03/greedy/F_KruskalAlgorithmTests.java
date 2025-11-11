@@ -14,6 +14,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+/*
+* 백준(1197)
+* https://www.acmicpc.net/problem/1197
+* */
 class F_KruskalAlgorithmTests {
 
     static String input1, input2;
